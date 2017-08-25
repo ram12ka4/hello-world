@@ -1,33 +1,74 @@
 
-What is the difference between Function and Method ?
-Ans : A function is a piece of code that is called by name. 
-      It can be passed data to operate on (i.e. the parameters) 
-      and can optionally return data (the return value). 
-      All data that is passed to a function is explicitly passed.
+1.    What is the difference between Function and Method ?
+      Ans : A function is a piece of code that is called by name. 
+            It can be passed data to operate on (i.e. the parameters) 
+            and can optionally return data (the return value). 
+            All data that is passed to a function is explicitly passed.
 
-A method is a piece of code that is called by a name that is associated with an object. 
-In most respects it is identical to a function except for two key differences:
+      A method is a piece of code that is called by a name that is associated with an object. 
+      In most respects it is identical to a function except for two key differences:
 
-A method is implicitly passed the object on which it was called.
-A method is able to operate on data that is contained within the class 
-(remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).
+      A method is implicitly passed the object on which it was called.
+      A method is able to operate on data that is contained within the class 
+      (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).
 
-What is the difference beteen Formal Parameter and Actual Argument ?
-Ans : Argument is often used in the sense of "actual argument" vs. "formal parameter".
+2.    What is the difference beteen Formal Parameter and Actual Argument ?
+      Ans : Argument is often used in the sense of "actual argument" vs. "formal parameter".
 
-The formal parameter is what's given in the function declaration/definition/prototype, 
-the actual argument is what's passed when calling the function, an instance of a formal parameter, if you will.
+      The formal parameter is what's given in the function declaration/definition/prototype, 
+      the actual argument is what's passed when calling the function, an instance of a formal parameter, if you will.
 
-That being said, they're often used interchangably, or depending on language/community,
-and I've also heard "actual parameter" &c.
+      That being said, they're often used interchangably, or depending on language/community,
+      and I've also heard "actual parameter" &c.
 
-So here, x and y would be formal parameters:
+      So here, x and y would be formal parameters:
 
-int foo(int x, int y) {
-    ...
-}
+      int foo(int x, int y) {
+          ...
+      }
 
-Whereas here, in the function call, 5 and z are the actual arguments:
+      Whereas here, in the function call, 5 and z are the actual arguments:
 
-foo(5, z);
+      foo(5, z);
+3.    Difference between Type and Class.
+      
+      Ans : A class is a type. An interface is a type. A primitive is a type. An array is a type.
+
+      Therefore, every type is also either a class (including an enum constant), an interface, a primitive, or an array.
+
+      There are two distinct categories of types: primitive types and reference types:
+
+      A variable of primitive type always holds a primitive value of that same type. Such a value can only be changed by assignment operations on that variable.
+      A variable of reference type always holds the value of a reference to an object. All objects, including arrays, support the methods of class Object. The reference types are class types (including enum types), interface types, and array types.
+      Every piece of data has a type which defines its structure, namely how much memory it takes up, how it is laid out, and more importantly, how you can interact with it.
+
+      Examples of primitive types:
+
+      int
+      float
+      char
+      boolean
+      Examples of class types:
+
+      String
+      Integer
+      Boolean
+      ArrayList
+      StringBuilder
+      Examples of interface types:
+
+      Collection
+      List
+      Map
+      Serializable
+      Examples of array types:
+
+      int[]
+      String[]
+      Integer[][][]
+      Basically, anything that you can refer to as a variable has a type, and classes are a kind of a type.
+
+      More info here: http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html
+
+ 
 
