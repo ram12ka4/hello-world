@@ -74,5 +74,25 @@ https://codingsec.net/2016/05/oop-required-programmers-life/
 
       More info here: http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html
 
- 
+ 4.   Why “private” methods in the object oriented?
+      
+      Ans :  Lot of good answers, but maybe one more from a self-taught Java programmer as I went through all that by myself with a lot of pain ;)
+
+      Think about a Class as something seen from the outside, not as something you see internally. If you look at a Class from the outside, what you see?
+
+      Taking the clock as an example again, a clock can give you info about the current time and it can be set up to show the right time.
+
+      So looking at things from the outside, a clock is a machine that can do those two things; public methods we call them.
+
+      But we as constructors of this clock we know that before any time operation we have to switch from 23 to 11 on our display (it's that kind of clock), so we have to rearrange things internally a bit to do so. Changing from 23 to 11 works just fine for us in both cases - setting the clock and showing the current time - but we do it "on the side" as the user doesn't have to know about all that complicated math. These are private methods!
+
+      So our Clock Class could have two public methods (showTime and setTime) which are all that the user wants to see, and a private method (recountTime) that provides functionality for these public methods and are something that the user doesn't want to see.
+
+      So on the one hand, you should keep in mind that private is what won't be reimplemented and accessed by future programmers using your code (as was pointed at in the answers above). But private also means things done on the side, so the user don't see it. That's why we call the public methods a public interface - it's all the user will see from the outside.
+
+      For me it is helpful (I'm self-taught, so maybe it's not a very popular methodology...) to write down everything the users (real users and other Classes) will do with my Class (public interface with just public methods' signatures), then to write the signatures of private methods that I-the-implementer will use to accomplish the public goals that promised to provide to my users and then just fulfill it with code.
+
+      It can be helpful to keep in mind that the old C rule is still valid (as was expressed in 97 Things Every Programmer Should Know): a function/method should be just a few lines long, really!!
+
+
 
