@@ -1,6 +1,7 @@
-# hello-world
-starting my first project on GitHub
 
-Hello everyone, i am ram and i am eger to know about GitHub repository.
+Chapters :
+            Chapter 1 : OOP basics and fundamental
+            Chapter 2 : Big data & Hadoop 
+            Chapter 3 : Data Science
+            
 
-This is my second attempt to practice GitHub.
